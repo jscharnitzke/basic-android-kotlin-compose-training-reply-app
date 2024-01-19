@@ -22,6 +22,7 @@ class ReplyAppStateRestorationTest {
     val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
     @Test
+    @TestCompactWidth
     fun compactDevice_selectedEmailRetained_afterConfigChange() {
         // set up compact window
         val stateRestorationTester = StateRestorationTester(composeTestRule)
@@ -62,6 +63,7 @@ class ReplyAppStateRestorationTest {
     }
 
     @Test
+    @TestExpandedWidth
     fun expandedDevice_selectedEmailRetained_afterConfigChange() {
         // set up expanded window
         val stateRestorationTester = StateRestorationTester(composeTestRule)
